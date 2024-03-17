@@ -57,7 +57,8 @@ class ViewController: UIViewController {
             /* NSLayoutConstraint.constraints(withVisualFormat:) is Auto Layout method that converts VFL into an array of constraints
              H: parts means that a horizontal layout. The pipe symbol, |, means "the edge of the view." "H:|[label1]|" means "horizontally, I want my label1 to go edge to edge in my view." */
         }
-        view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[label]-[labe2]-[labe3]-[labe4]-[labe5]|", options: [], metrics: nil, views: viewsDictionary))
+        
+        view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[label1]-[label2]-[label3]-[label4]-[label5]", options: [], metrics: nil, views: viewsDictionary))
         /* V:, meaning that these constraints are vertical
          - symbol, which means "space". It's 10 points by default, but you can customize it
          */
