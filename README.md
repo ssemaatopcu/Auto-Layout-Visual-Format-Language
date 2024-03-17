@@ -1,0 +1,3 @@
+Auto Layout serves as a potent instrument for establishing adaptable, sustainable guidelines for your user interface. It is something that makes hard things easy and easy things hard.
+Every UIView has a set of anchors that define its layouts rules. Auto Layout anchors are by far the easiest way to make constraints, and they also happen to have a really natural form too. The most important ones are widthAnchor, heightAnchor, topAnchor, bottomAnchor, leftAnchor, rightAnchor, leadingAnchor, trailingAnchor, centerXAnchor, and centerYAnchor.
+I used widthAnchor, heightAnchor, topAnchor, leadingAnchor ve trailingAnchor in this project.
