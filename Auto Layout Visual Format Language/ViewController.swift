@@ -58,9 +58,13 @@ class ViewController: UIViewController {
              H: parts means that a horizontal layout. The pipe symbol, |, means "the edge of the view." "H:|[label1]|" means "horizontally, I want my label1 to go edge to edge in my view." */
         }
         
-        view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[label1]-[label2]-[label3]-[label4]-[label5]", options: [], metrics: nil, views: viewsDictionary))
+        let metrics = ["labelHeight": 88]
+        
+        view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[label1(labelHeight@999)]-[label2(label1)]-[label3(label1)]-[label4(label1)]-[label5(label1)]-(>=10)-|", options: [], metrics: metrics, views: viewsDictionary))
         /* V:, meaning that these constraints are vertical
          - symbol, which means "space". It's 10 points by default, but you can customize it
+         Note that when specifying the size of a space, we need to use the - before and after the size: a simple space, -, becomes -(>=10)-
+         Constraint priority is a value between 1 and 1000, where 1000 means "this is absolutely required" and anything less is optional
          */
     }
 
